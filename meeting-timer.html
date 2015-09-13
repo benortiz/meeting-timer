@@ -2,20 +2,52 @@
 <html>
 <head>
   <title>Meeting Timer: Inspired by ReWork</title>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Open+Sans:400">
   <link href="meeting-timer.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- TODO: Find a color palette -->
   <!-- TODO: optimize view for "keyboard up" -->
-  <!-- TODO: default input onclick to select all -->
+  <div id="container">
+    <p>
+      <span id="mt-past-present">I am in a meeting with</span>
+      <span class="highlight">
+        <input id="attendees" type="number" value="2" />&nbsp;<span id="attend-plural">attendees</span></span>.
+    </p>
 
-  <h1><time id="nums">00:00:00</time></h1>
-  <button id="start">Start</button>
-  <button id="reset">Reset</button>
-  <button id="pause">Pause</button>
-  <input id="attendees" type="number" value="1" />
+    <p id="cost">
+      <span id="cost-past-present">So far, this meeting has cost</span>
 
+      <span id="hrs-exist">
+        <span class="highlight">
+          <time id="hrs">0</time>
+          <span id="hrs-plural">hours</span>,
+        </span>
+      </span>
+
+      <span id="mins-exist">
+        <span class="highlight">
+          <time id="mins">0</time>
+          <span id="mins-plural">minutes</span>
+        </span>
+        and
+      </span>
+
+      <span class="highlight">
+        <time id="secs">0</time>
+        <span id="secs-plural">seconds</span>
+      </span>
+      of productive time.
+    </p>
+
+
+
+    <button id="control" class="start">Start meeting.</button>
+    <button id="end">End meeting.</button>
+    <button id="reset">New meeting.</button>
+  </div>
+
+  <script src="stretchy.min.js" type="text/javascript" async></script>
   <script src="meeting-timer.js" type="text/javascript"></script>
 </body>
 </html>

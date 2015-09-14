@@ -13,6 +13,7 @@ var hrs = document.getElementById('hrs'),
     control = document.getElementById('control'),
     reset = document.getElementById('reset'),
     end = document.getElementById('end'),
+    noMore = document.getElementById('no-more'),
 
     mtPast = document.getElementById('mt-past-present'),
     costPast = document.getElementById('cost-past-present'),
@@ -114,12 +115,18 @@ control.onclick = function () {
     secs.textContent = "0";
     seconds = 0; minutes = 0; hours = 0;
 
+    hrsExist.style.display = "none";
+    minsExist.style.display = "none";
+
     cost.style.display = "none";
+
+    noMore.style.display = "none";
 
     mtPast.textContent = "I am in a meeting with";
     costPast.textContent = "So far, this meeting has cost";
 
     attendInput.value = 2;
+    attendees = 2;
 
     control.textContent = "Start meeting.";
     control.className = "start";
@@ -138,6 +145,7 @@ end.onclick = function () {
   end.style.display = "none";
   control.className = "new";
   control.textContent = "New meeting.";
+  noMore.style.display = "block";
 }
 
 

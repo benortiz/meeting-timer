@@ -2,7 +2,13 @@ body {
   background-color: #003C4E;
   color: #9DD4CA;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
 }
 
 .highlight {
@@ -35,6 +41,11 @@ button:focus {
   box-shadow: none;
 }
 
+button:active {
+  border-bottom-color: #DB5639;
+  color: #EFDF9A;
+}
+
 input[type=number] {
   font-size: 1.1em;
   font-family: 'Open Sans', sans-serif;
@@ -42,6 +53,7 @@ input[type=number] {
   color: #F3E6AD;
   width: 1em;
   border: none;
+  border-radius: 0px;
   border-bottom: 2px solid #F3E6AD;
 }
 
@@ -56,8 +68,9 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-#mins-exist, #hrs-exist, #cost, #reset, #end {
+#mins-exist, #hrs-exist, #cost, #reset, #end, #no-more {
   display: none;
+  animation: fadeIn 1s;
 }
 
 #container {

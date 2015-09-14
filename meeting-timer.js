@@ -151,11 +151,11 @@ end.onclick = function () {
 }
 
 noMore.onclick = function () {
-  if (noMore.className === "off") {
-    noMore.className = "on";
+  if (whyNoMore.className === "off") {
+    whyNoMore.className = "on";
     whyNoMore.style.display = "block";
   } else {
-    noMore.className = "off";
+    whyNoMore.className = "off";
     whyNoMore.style.display = "none";
   }
 }

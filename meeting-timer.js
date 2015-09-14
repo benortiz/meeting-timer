@@ -14,6 +14,7 @@ var hrs = document.getElementById('hrs'),
     reset = document.getElementById('reset'),
     end = document.getElementById('end'),
     noMore = document.getElementById('no-more'),
+    whyNoMore = document.getElementById('why-no-more'),
 
     mtPast = document.getElementById('mt-past-present'),
     costPast = document.getElementById('cost-past-present'),
@@ -121,6 +122,7 @@ control.onclick = function () {
     cost.style.display = "none";
 
     noMore.style.display = "none";
+    whyNoMore.style.display = "none";
 
     mtPast.textContent = "I am in a meeting with";
     costPast.textContent = "So far, this meeting has cost";
@@ -146,6 +148,16 @@ end.onclick = function () {
   control.className = "new";
   control.textContent = "New meeting.";
   noMore.style.display = "block";
+}
+
+noMore.onclick = function () {
+  if (noMore.className === "off") {
+    noMore.className = "on";
+    whyNoMore.style.display = "block";
+  } else {
+    noMore.className = "off";
+    whyNoMore.style.display = "none";
+  }
 }
 
 

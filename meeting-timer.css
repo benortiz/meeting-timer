@@ -58,11 +58,13 @@ input[type=number] {
   width: 1em;
   border: none;
   border-radius: 0px;
-  border-bottom: 2px solid #F3E6AD;
+  border: 1px solid #003C4E;
+  border-bottom: 1px solid #F3E6AD;
 }
 
 input[type=number]:focus {
   outline: none;
+  border: 1px solid #F3E6AD;
 }
 
 /* hides the number spinner */
